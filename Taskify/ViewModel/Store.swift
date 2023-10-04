@@ -52,4 +52,8 @@ final class Store: ObservableObject {
     ///Switching off the updating (edit) toggle
     updatingTask.toggle()
   }
+  
+  func deleteTask(task: Task) {
+    if let index = tasks.firstIndex(where: { $0.id == task.id }) { tasks.remove(at: index) }
+  }
 }

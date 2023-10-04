@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TaskDetail: View {
+  @Environment(\.dismiss) var dismiss
   @ObservedObject var vm: Store
   @State private var title = ""
   @State private var notes = ""
@@ -39,7 +40,9 @@ struct TaskDetail: View {
               vm.updatingTask.toggle()
             }
               Button("Delete", role: .destructive) {
-                vm.toggleCompletion(task: task)
+                dismiss()
+                vm.deleteTask(task: task)
+                vm.updatingTask.toggle()
               }
             
           }

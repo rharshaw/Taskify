@@ -34,12 +34,10 @@ struct ContentView: View {
           }
         }
       }
-      
       .navigationDestination(for: Task.self) { task in
         TaskDetail(vm: vm, task: task)
       }
     }
-    
     .overlay {
       EmptyTasksView(vm: vm)
     }
