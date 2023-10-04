@@ -37,6 +37,7 @@ struct NewTask: View {
           ToolbarItem(placement: .topBarTrailing) {
             Button("Add") {
               vm.addTask(title: taskTitle, notes: taskNotes)
+              vm.addingNewTask.toggle()
             }
             .disabled(taskTitle.isEmpty ? true : false)
           }
