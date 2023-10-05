@@ -16,7 +16,8 @@ struct TaskRow: View {
     VStack(spacing: 20) {
       HStack {
         Text(task.title)
-          .tint(.primary)
+          .tint(.blue)
+          .bold()
           .font(.title3)
         Spacer()
         Image(systemName: task.isCompleted ? "checkmark.square.fill" : "square")
@@ -26,7 +27,7 @@ struct TaskRow: View {
             vm.toggleCompletion(task: task)
           }
       }
-      .padding(.horizontal)
+      Divider()
     }
   }
 }

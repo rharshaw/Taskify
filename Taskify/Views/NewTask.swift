@@ -39,7 +39,7 @@ struct NewTask: View {
               vm.addTask(title: taskTitle, notes: taskNotes)
               vm.addingNewTask.toggle()
             }
-            .disabled(taskTitle.isEmpty ? true : false)
+            .disabled(taskTitle.isEmpty)
           }
         }
       }
