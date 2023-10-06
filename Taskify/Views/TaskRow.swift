@@ -16,7 +16,6 @@ struct TaskRow: View {
     VStack(spacing: 20) {
       HStack {
         Text(task.title)
-          .tint(.blue)
           .bold()
           .font(.title3)
         Spacer()
@@ -29,6 +28,7 @@ struct TaskRow: View {
       }
       Divider()
     }
+    .padding(.horizontal)
   }
 }
 

@@ -21,8 +21,7 @@ final class Store: ObservableObject {
   }
   
   func addTask(title: String, notes: String) {
-    let newTask = Task(title: title, notes: notes)
-    tasks.append(newTask)
+    tasks.append(Task(title: title, notes: notes))
   }
  
   
